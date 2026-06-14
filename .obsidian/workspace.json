@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JVM/JVM.md",
+                "file": "MySQL/MySQL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JVM"
+              "title": "MySQL"
             }
           }
         ],
@@ -194,12 +194,12 @@
   },
   "active": "ae1f04269bdc78bf",
   "lastOpenFiles": [
+    "JVM/JVM.md",
     "Pasted image 20260614150657.png",
     "Pasted image 20260613111318.png",
     "429385d189bf7fd5d26f8b6a3d748cc5.png",
     "60678c30454422b4ac001aa37f0f8418.png",
     "语法/Markdown语法.md",
-    "JVM/JVM.md",
     "Spring",
     "JVM",
     "MySQL/MySQL.md",
