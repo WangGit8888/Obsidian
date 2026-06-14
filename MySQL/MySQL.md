@@ -54,9 +54,27 @@ Throwable (所有错误和异常的父类)
 
 ###定位###
 
---开启慢查询日志：在 MySQL 配置中开启 slow_query_log，设置 long_query_time（例如设为 1 秒或 2 秒）
---  Prometheus/Grafana
+-- 开启慢查询日志：在 MySQL 配置中开启 slow_query_log，设置 long_query_time（例如设为 1 秒或 2 秒）
+
+--  Mysql_Export + Prometheus + Grafana 实现慢查询监控
 
 ###分析###
-123
+
+类型	含义	特点	常见场景
+
+system	表只有一行数据（系统表）	const 类型的特例，性能极佳	极少出现，如 mysql 库中的系统表
+
+const	通过主键或唯一索引与常量等值匹配	最多返回一行，速度快，结果被优化为常量	
+WHERE id = 1（id 是主键）
+
+eq_ref	多表连接时，被驱动表的连接字段是主键或唯一索引	对于驱动表的每一行，被驱动表最多返回一行	JOIN ... ON a.ref_id = b.id（b.id 是主键）
+
+ref	使用普通索引或唯一索引的部分前缀进行等值匹配	可能返回多行，但性能良好	WHERE name = '张三'（name 有普通索引）
+
+range	使用索引进行范围扫描	通过索引检索指定范围内的行	BETWEEN、>、<、LIKE '张%'、IN
+
+index	全索引扫描	遍历整个索引树，比 range 差，但通常比 ALL 好	查询的字段都在索引中，无需回表
+
+ALL	全表扫描	逐行扫描所有数据，性能最差	没有命中任何索引，或查询条件不符合索引使用规则
+
 ###解决###

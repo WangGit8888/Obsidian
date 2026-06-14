@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MySQL/MySQL.md",
+                "file": "JVM/JVM.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MySQL"
+              "title": "JVM"
             }
           }
         ],
@@ -194,9 +194,16 @@
   },
   "active": "ae1f04269bdc78bf",
   "lastOpenFiles": [
-    "未命名/Markdown语法.md",
+    "Pasted image 20260614150657.png",
+    "Pasted image 20260613111318.png",
+    "429385d189bf7fd5d26f8b6a3d748cc5.png",
+    "60678c30454422b4ac001aa37f0f8418.png",
+    "语法/Markdown语法.md",
+    "JVM/JVM.md",
+    "Spring",
+    "JVM",
     "MySQL/MySQL.md",
-    "未命名",
+    "语法",
     "Redis",
     "Untitled.md",
     "Spring容器.md",
@@ -212,9 +219,7 @@
     "第一章/2/Untitled.md",
     "Welcome.md",
     "第一章/2",
-    "JVM",
-    "Java并发编程的艺术.pdf",
-    "java编程思想第五版.pdf",
-    "JAVA并发编程实践（中文）.pdf"
+    "语法",
+    "Java并发编程的艺术.pdf"
   ]
 }
